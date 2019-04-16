@@ -1,0 +1,467 @@
+/* *, *::before, *::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+} */
+
+@font-face {
+    font-family: system;
+    src: url('./fonts/FF_DIN_Pro_Regular_Italic.otf');
+}
+
+@font-face {
+    font-family: system;
+    font-weight: 700;
+    
+    src: url('./fonts/FF_DIN_Pro_Bold_Italic.otf');
+
+}
+
+@font-face {
+    font-family: system;
+    font-weight: 100;
+    src: url('./fonts/FF_DIN_Pro_Light_Italic.otf');
+
+}
+
+@font-face {
+    font-family: system;
+    font-weight: 900;
+    src: url('./fonts/FF_DIN_Pro_Black_Italic.otf');
+}
+
+@font-face {
+    font-family: system;
+    font-weight: 500;
+    src: url('./fonts/FF_DIN_Pro_Medium_Italic.otf')
+
+}
+
+#reviewOrder_buySell_backSpan, #shares_buySell_label, .reviewOrder_buySell_buttonDescription, .estimatedCost_buySell_title, .dropDownInput_buySell_selectArrow, 
+.dropDownInput_buySell_selectArrowZone, .dropDownInput_buySell_selectValueLabel, .dropDownInput_buySell_selectMultiValue, 
+#dropDownInput_buySell_label, #checkBox_buySell_description, .estimatedCost_buySell_price {
+    align-items: center;
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+input:hover {
+    border-color: #cbcbcd;
+  }
+  
+  input:focus {
+    border-color: #21c399;
+    outline-width: 0;
+  }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.app_buySell_orderForm {
+    position: fixed;
+    z-index: 100000;
+    /* right: 612px; */
+    top: 60px;
+    width: 275px;   
+    min-height: 100px;
+    overflow: hidden;
+    padding: 0 24px;  
+    /* background-color: #1b1b1d; */
+    background-color: #ffffff;
+    font-size: 13px;
+    font-family: system;
+    line-height: 19px;
+    text-align: start;
+    letter-spacing: 0.25px;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.01), 0 3px 24px rgba(48, 51, 51, 0.09);
+    padding-bottom: 12px;
+    padding-top: 12px;
+    -webkit-box-direction: normal;
+}
+
+.app_buySell_orderInfo {
+    padding-bottom: 44px;
+    padding-top: 12px;
+}
+
+.title_buySell_section, .dropDown_buySell_title {
+   box-sizing: inherit;
+   padding-bottom: 10px;
+}
+
+.title_buySell_section {
+    border-color: #0e0d0d;
+    border-bottom: 1px solid;
+    padding: 4px 24px 0px;
+    margin: 0px -24px;
+}
+
+.title_buySell_title {
+    padding-bottom: 12px;
+    font-weight: 500;
+    font-size: 16px;   
+}
+
+.buyType_buySell_button {
+   position: absolute;
+   cursor: pointer;
+   height: 30px;
+   padding: 8px 0 8px 8px;
+   width: 28;
+   height: 28;
+   top: 6.2px;
+   right: 12px;
+}
+
+.shares_buySell_title {
+    box-sizing: inherit;
+}
+
+.input_buySell_input {
+    height: 36px;
+    padding: 0 13px;
+    float: right;
+    border: 1px solid;
+    border-radius: 4px;
+    line-height: 1.5em;
+    outline: 0;
+    text-align: right;
+    /* background-color: #171718; */
+    /* color: #ffffff; */
+    -webkit-writing-mode: horizontal-tb !important;
+    transition: border-color 200ms;
+}
+
+.pricing_buySell_seciton {
+    padding-right: 12px;
+    height: 48px;
+}
+
+.pricing_buySell_title {
+    color: #21ce99;
+    float: left;
+}
+
+.pricing_buySell_price {
+    padding: 0 13px;
+    text-align: right;
+    float: right;
+}
+
+.estimatedCost_buySell_section {
+    border-color: #0e0d0d;
+    border-top: 1px solid;
+    padding-right: 12px
+}
+
+.estimatedCost_buySell_title {
+    float: left;
+    margin-right: 12px;
+    min-width: 48px;
+}
+
+.estimatedCost_buySell_price {
+    padding: 0 13px;
+    text-align: right;
+    float: right;
+}
+
+.dropDown_buySell_outerSection {
+    overflow: visible;
+    position: absolute; 
+    display: block;
+    padding: 24px;
+    overflow: visible;
+    right: -24px;
+    width: 180px;
+    border: none;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.01), 0 3px 24px rgba(48, 51, 51, 0.09);
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.dropDown_buySell_innerSection {
+    margin: 0 -24x;
+    
+}
+
+.dropDown_buySell_title {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    height: 52px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 4px 24px 0;
+    border-bottom: 1px solid black;
+}
+
+.dropDown_buySell_option-active, 
+.dropDown_buySell_option {
+   text-decoration: none; 
+   font-weight: 500;
+   position: relative;
+}
+
+.dropDown_buySell_option-active {
+    border-color: #21ce99;
+    color: #21ce99;
+    
+}
+
+.dropDown_buySell_option-active, .dropDown_buySell_option {
+    padding: 0px 0px 0px 22px;
+}
+
+.dropDown_buySell_option {  
+    color: #171718;
+}
+
+.dropDown_buySell_option:hover {
+    color: #21ce99;
+}
+
+.app_buySell_checkBox {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 12px;
+    float: left;
+    
+}
+
+.app_buySell_checkBox:after {
+
+    content: " ";
+    display:block;
+    position: absolute;
+    width: 100%;
+    height:50px;
+    border-color: #f4f4f5;
+    border-bottom: 1px solid;
+}
+
+.checkBox_buySell_checkboxSection {
+    margin-right: 12px;
+    float: left;     
+}
+
+.checkBox_buySell_checkBox {
+    border-color: #21ce99;
+    border: 2px solid;
+    border-radius: 4px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 20px;
+    
+}
+
+.checkBox_buySell_checkMarkSvg {
+    height: calc(100% + 2 * 2px);
+    left: -6px;
+    /* opacity: 0; */
+    padding: 4px;
+    position: absolute;
+    top: -5px;
+    transform: scale(0.6);
+    transition: transform 300ms;
+    width: calc(100% + 2 * 2px);
+    box-sizing: inherit;
+}
+.checkBox_buySell_description {
+    width:10px;
+    display:block;
+    white-space:nowrap;
+}
+
+.reviewOrder_buySell_closedUp {
+    box-sizing: inherit;
+    display: block;
+    padding : 12px 0px 24px;
+    
+}
+
+.reviewOrder_buySell_section {
+    /* margin: 0px 24px; */
+    border-color: #f4f4f5;
+    border-top: 1px solid transparent;
+    transition: border-color 250ms;
+    padding: 50px 24px 24px;
+}
+
+.reviewInfo_buySell_transitionSection {
+    transition: height;
+    -webkit-transition: height 250ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: height 250ms cubic-bezier(0.22, 0.61, 0.36, 1);
+   
+}
+
+.reviewInfo_buySell_upperContentSection {
+    opacity: 1;
+    visibility: visible;
+    /* -webkit-transition: opacity, visibility;
+    opacity: 1;
+    visibility: visible;
+    margin: 0px 0px 4px;
+    transition: opacity, visibility ease 250ms; */
+}
+
+.reviewInfo_buySell_title {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    line-height: 19px;
+    margin: 0 0 4px;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.reviewOrder_buySell_button, .reviewOrder_buySell_backButton  {
+    -webkit-appearance: button;
+    -webkit-box-align: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    min-width: 120px;
+    padding: 0 48px;
+    white-space: nowrap;
+}
+
+.reviewOrder_buySell_button {
+    background: #21ce99;
+    border-color: #21ce99;
+}
+
+.reviewOrder_buySell_backButton {
+    border: 1px solid #21ce99;
+    color : #21c399;
+}
+  
+.reviewOrder_buySell_buttonDescription {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    line-height: 19px;
+    margin: 0;
+}
+
+.buyingPower_buySell_component {
+    margin: 0 24px 0;
+    align-items: center;
+   
+    display: flex;
+    height: 48px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    
+}
+
+.buyingPower_buySell_component:after {
+    content: " ";
+    display:block;
+    position: absolute;
+    width: 100%;
+    height:40px;
+    border-color: #0e0d0d;
+    border-top: 1px solid;
+    
+}
+
+.dropDownInput_buySell_component {
+    
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    height: 48px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    white-space: nowrap;
+    
+}
+
+.dropDownInput_buySell_inputSection {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    line-height: 19px;
+}
+
+.dropDownInput_buySell_inputDiv {
+    margin-bottom: 6px;
+    box-sizing: border-box;
+    position: relative;
+    white-space: nowrap;
+}
+
+.dropDownInput_buySell_input {
+    border: 1px solid;
+    border-radius: 4px;
+    height: 36px;
+    line-height: 1.5em;
+    outline: 0;
+    padding: 0 13px;
+    -webkit-transition: border-color 200ms;
+    transition: border-color 200ms;
+    width: 100%;
+}
+
+.dropDownInput_buySell_inputSelection {
+    background: #ffffff;
+    border-color: #ffffff;
+    border-collapse: separate;
+    border-spacing: 0;
+    cursor: default;
+    display: table;
+    outline: none;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    
+}
+
+.dropDownInput_buySell_selectArrowZone {
+    cursor: pointer;
+    display: table-cell;
+    padding-right: 5px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 25px;
+}
+
+.dropDownInput_buySell_selectArrow {
+    border-color: #999 transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px 2.5px;
+    display: inline-block;
+    height: 0;
+    position: relative;
+    width: 0;
+}
+
+.dropDownInput_buySell_selectMenuOuter {
+    position: absolute;
+    background: #ffffff;
+    z-index: 1000;
+}
+
+.dropDownInput_buySell_option:hover, .dropDownInput_buySell_selectedOption:hover {
+    background: #21ce99;
+    color: #ffffff;
+}

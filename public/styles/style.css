@@ -1,0 +1,159 @@
+
+
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  }
+  
+
+.app_buySellBody {
+    content: 275px 354px;
+    overflow: auto;
+    padding: 24px 24px;
+    top : 95px;
+    width: 275.3px;
+    background-color: #ffffff;
+    font-size: 13px;
+    font-family: 'system';
+    line-height: 19px;
+    text-align: start;
+    letter-spacing: 0.25px;
+    fill : #171718;
+    border-radius: 2px;
+    
+    align-items: center;
+    -webkit-box-align: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 4px 1px, rgba(48, 51, 51, 0.09) 0px 3px 24px 0px;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.app_buySellTitle {  
+   /* transition: border-color 250ms, color 250ms; */
+   
+   content : 70px 47px;
+   padding : 12px 0px 12px 0px;
+   display: block;
+   /* margin-block-start: 1em;
+   margin-block-end: 1em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px; */
+  
+     
+}
+
+.app_buySellTitleSection {
+    display: flex;
+    height: 100%;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    content : 227px 47px;
+    padding : 10px 10px;
+    /* top : -55px; */
+    /* -webkit-box-shadow:0px 1px 1px #de1dde;
+ -moz-box-shadow:0px 1px 1px #de1dde;
+ box-shadow:0px 1px 1px #de1dde;
+     */
+}
+
+.app_buySellTitleButton {  
+  right : 0;
+  padding : 8px 0 8px 8px;
+  position: absolute;
+  content : 28px 28px;
+  width : 30px;
+  height : 30px;
+ 
+}
+
+.app_buySellTitleButton:hover {
+  fill: #21c399;
+}
+
+.buySell_buy-type_dropdown_option:hover {
+  -webkit-text-fill-color: #21c399;
+}
+
+#app_buySellTitleDropdown {
+  content: 180px 306px;
+  top: 95px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 4px 1px, rgba(48, 51, 51, 0.09) 0px 3px 24px 0px;
+  position: fixed;
+  /* margin : 24px 24px; */
+}
+
+#app_buySellOrderTypeTitle {
+  border-radius: 2px;
+  padding : 0px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 4px 1px, rgba(48, 51, 51, 0.09) 0px 3px 24px 0px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.input_buySellTitle {
+  float: left;
+  position: absolute;
+}
+
+.input_buySellInput {
+  float: right;
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  line-height: 1.5em;
+  padding: 0 13px;
+  -webkit-transition: border-color 200ms;
+  transition: border-color 200ms;  
+  
+  /* width: 82px;   */
+}
+
+.pricing_buySellSection {
+  width : 100%;
+  height: 100%;
+  top : 40px;
+  padding: 0px 12px 12px 12px;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  /* display: flex; */
+  height: 48px; 
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  /* white-space: nowrap; */
+  font-weight: 500;     
+  border : 12px 12px 12px 12px;
+}
+
+.pricing_buySellIdentifier {
+  position: absolute;
+  color: #21ce99;
+  float : left;
+  content : 93px 48px;
+  -webkit-box-direction: normal;
+  
+}
+
+.pricing_buySellPresenting {
+  float : right;
+  content : 47.2px 9px;
+}
+
+.input_buySellInput:hover {
+  border-color: #cbcbcd;  
+}
+
+.input_buySellInput:focus {
+  border-color: #21c399;
+  outline-width: 0;
+}
