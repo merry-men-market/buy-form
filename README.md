@@ -7,6 +7,7 @@
 1. [Installation](#Installation)
 1. [Requirements](#requirements)
 1. [Development](#development)
+1. [Getting Started](#getting-started)
 
 ## Installation
 
@@ -19,6 +20,14 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node 6.13.0
 - etc
+
+## Getting Started
+CD to root folder
+
+```sh
+npm install
+npm run start
+```
 
 ## Development
 
