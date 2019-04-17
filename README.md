@@ -4,13 +4,14 @@
 
 ## Table of Contents
 
-1. [Usage](#Usage)
+1. [Installation](#Installation)
 1. [Requirements](#requirements)
 1. [Development](#development)
 
-## Usage
+## Installation
 
-> Some usage instructions
+Clone the latest version: 
+`git clone https://github.com/merry-men-market/buy-form.git`
 
 ## Requirements
 
