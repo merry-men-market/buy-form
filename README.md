@@ -1,13 +1,6 @@
-# Project Name
+# Buy Form Module
 
-> Project description
-
-## Related Projects
-
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+> Robinhood's Buy Form component allows a user to purchase shares of a specific stock
 
 ## Table of Contents
 
