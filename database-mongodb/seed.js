@@ -530,7 +530,6 @@ for (var i = 0; i < 100; i++) {
         currentPrice: price,
         previousPrice: upOrDown(price)
     }
-    process.stdout.write('')
     stocks.push()
 }
 
