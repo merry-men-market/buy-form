@@ -17,6 +17,7 @@ app.use(bodyParser.json())
 
 app.use('/stocks/:query', express.static(__dirname + '/../public/'));
 
+//READ
 app.get('/api/stocks/:query', (req, res) => {
     var query = req.params.query;
     var dbQuery = {

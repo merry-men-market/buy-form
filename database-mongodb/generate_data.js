@@ -403,9 +403,9 @@ const companyData = [{
   }
 ];
 
-let writer = fs.createWriteStream(__dirname + '/datafile.csv');
+let writer = fs.createWriteStream(__dirname + '/datafileSample.csv');
 
-function changeObjectToCSV(object) {
+function changeObjectToCSVFormat(object) {
   let values = Object.values(object)
   let string = '';
   for (let i = 0; i < values.length; i++) {
@@ -418,24 +418,11 @@ function changeObjectToCSV(object) {
   return string;
 }
 
-// function changeObjectToCSVFirstLine(object) {
-//   let keys = Object.keys(object)
-//   let string = '';
-//   for (let i = 0; i < keys.length; i++) {
-//     if (i === keys.length - 1) {
-//       string += keys[i]
-//     } else {
-//       string += (keys[i] + ',')
-//     }
-//   }
-//   return string;
-// }
-
 function writeOneMillionTimes(writer, encoding, callback) {
-  let i = 10;
+  let i = 100;
 
   function write() {
-    let ok = true;
+    let notClogged = true;
     do {
       var price = Faker.finance.amount(10.00, 400.00)
       var randomIdx = Math.floor(Math.random() * 100);
@@ -445,7 +432,7 @@ function writeOneMillionTimes(writer, encoding, callback) {
         ticker: companyData[randomIdx].ticker + i,
         currentPrice: price,
       }
-      stock = changeObjectToCSV(stock);
+      stock = changeObjectToCSVFormat(stock);
       // stock = JSON.stringify(stock);
       i--;
       if (i === 0) {
@@ -454,16 +441,17 @@ function writeOneMillionTimes(writer, encoding, callback) {
       } else {
         // See if we should continue, or wait.
         // Don't pass the callback, because we're not done yet.
-        ok = writer.write(`${stock}\n`, encoding);
+        notClogged = writer.write(`${stock}\n`, encoding);
       }
-    }
-    while (i > 0 && ok);
+    } while (i > 0 && notClogged);
+
     if (i > 0) {
       // had to stop early!
       // write some more once it drains
       writer.once('drain', write);
     }
   }
+
   write();
 }
 
@@ -480,3 +468,26 @@ writeOneMillionTimes(writer, 'utf8', () => console.log('completed the file write
 //   }
 //   console.log(stock);
 // }
+
+// function changeObjectToCSVFirstLine(object) {
+//   let keys = Object.keys(object)
+//   let string = '';
+//   for (let i = 0; i < keys.length; i++) {
+//     if (i === keys.length - 1) {
+//       string += keys[i]
+//     } else {
+//       string += (keys[i] + ',')
+//     }
+//   }
+//   return string;
+// }
+
+// CREATE TABLE stock(
+//   id INT,
+//   name VARCHAR(50),
+//   ticker VARCHAR(50),
+//   current_price MONEY,
+//   PRIMARY KEY (id, ticker)
+// );
+
+// COPY stock FROM '/Users/Jonathan/desktop/buyComponent/database-mongodb.datafileSample.csv' WITH (FORMAT csv);
