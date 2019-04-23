@@ -403,7 +403,7 @@ const companyData = [{
   }
 ];
 
-let writer = fs.createWriteStream(__dirname + '/datafileSample.csv');
+let writer = fs.createWriteStream(__dirname + '/datafile.csv');
 
 function changeObjectToCSVFormat(object) {
   let values = Object.values(object)
@@ -419,7 +419,7 @@ function changeObjectToCSVFormat(object) {
 }
 
 function writeOneMillionTimes(writer, encoding, callback) {
-  let i = 100;
+  let i = 10000000;
 
   function write() {
     let notClogged = true;
@@ -468,26 +468,3 @@ writeOneMillionTimes(writer, 'utf8', () => console.log('completed the file write
 //   }
 //   console.log(stock);
 // }
-
-// function changeObjectToCSVFirstLine(object) {
-//   let keys = Object.keys(object)
-//   let string = '';
-//   for (let i = 0; i < keys.length; i++) {
-//     if (i === keys.length - 1) {
-//       string += keys[i]
-//     } else {
-//       string += (keys[i] + ',')
-//     }
-//   }
-//   return string;
-// }
-
-// CREATE TABLE stock(
-//   id INT,
-//   name VARCHAR(50),
-//   ticker VARCHAR(50),
-//   current_price MONEY,
-//   PRIMARY KEY (id, ticker)
-// );
-
-// COPY stock FROM '/Users/Jonathan/desktop/buyComponent/database-mongodb.datafileSample.csv' WITH (FORMAT csv);

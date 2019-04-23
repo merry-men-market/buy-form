@@ -36,11 +36,9 @@ class App extends React.Component {
             })
             .then(result => {
                 console.log('the result is:', result);
-                console.log('the ticker is: ', result[0].ticker)
-                let currentPrice = result[0].currentPrice;
-                let currentTicker = result[0].ticker;
-                // ticker = result[0].ticker;
-                // console.log('ticker is', ticker);
+                console.log('the ticker is: ', result.ticker)
+                let currentPrice = result.current_price;
+                let currentTicker = result.ticker;
                 appThis.setState({
                     price: currentPrice,
                     ticker: currentTicker
