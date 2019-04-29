@@ -1,13 +1,17 @@
+var newrelic = require('newrelic');
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-var mongoose = require('mongoose');
-var db = require('../database-mongodb/index.js');
-var Stock = require('../database-mongodb/Stock.js');
-var stockDb = require('../database-mongodb/queries')
+// var mongoose = require('mongoose');
+// var db = require('../database-mongodb/index.js');
+// var Stock = require('../database-mongodb/Stock.js');
+var stockDb = require('../database-mongodb/queries');
+var path = require('path')
 
 var port = 8080;
 var app = express();
+
+app.locals.newrelic = newrelic;
 
 //middleware
 app.use(cors());
@@ -16,9 +20,14 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(bodyParser.json())
 
+app.use(express.static(path.join(__dirname, '../public')));
 app.use('/stocks/:query', express.static(__dirname + '/../public/'));
-
 app.get('/api/stocks/:query', stockDb.getStockById)
+
+app.listen(port, () => {
+    console.log('Server listening on port ', port);
+})
+
 //READ
 // app.get('/api/stocks/:query', (req, res) => {
 //     var query = req.params.query;
@@ -71,8 +80,3 @@ app.get('/api/stocks/:query', stockDb.getStockById)
 //         ticker
 //     }, () => console.log('Deleted stock: ', ticker))
 // })
-
-
-app.listen(port, () => {
-    console.log('Server listening on port ', port);
-})
