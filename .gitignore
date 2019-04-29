@@ -1,4 +1,10 @@
 node_modules
 goblinhood.pem
+*.csv
 
-/Users/Jonathan/Desktop/buyComponent/database-mongodb/datafile.csv
+# ignore .csv files
+datafile.csv
+datafileSample.csv
+
+# ignore file named newrelic.ks
+newrelic.js
