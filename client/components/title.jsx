@@ -5,7 +5,7 @@ class StockTitle extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            dropDownOn : false,
+            dropDownOn: false,
         }
     }
 
@@ -13,11 +13,11 @@ class StockTitle extends React.Component {
         return (
             <header className='title_buySell_section'>
                 <div className='title_buySell_title'>
-                    Buy AAPL
+                    {this.props.title}
                 </div>
-                
-                    <BuyType changeMode={this.props.changeMode}/>
-               
+
+                <BuyType changeMode={this.props.changeMode} />
+
             </header>
         );
     }
@@ -25,4 +25,4 @@ class StockTitle extends React.Component {
 
 export default StockTitle;
 
-{/* <BuyType clickHandler={this.props.clickHandler.bind(this)}/> */}
+{/* <BuyType clickHandler={this.props.clickHandler.bind(this)}/> */ }

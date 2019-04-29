@@ -1,2 +1,12 @@
 node_modules
 goblinhood.pem
+*.csv
+cassandra.js 
+generate_data.js
+
+# ignore .csv files
+datafile.csv
+datafileSample.csv
+
+# ignore file named newrelic.ks
+newrelic.js
