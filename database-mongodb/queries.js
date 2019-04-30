@@ -9,7 +9,7 @@ const bodyParser = require('body-parser')
 const stock = new Pool({
   user: 'power_user',
   host: 'ec2-13-57-224-41.us-west-1.compute.amazonaws.com',
-  database: 'stockbuyform',
+  database: 'postgres',
   password: '$poweruserpassword',
   port: 5432
 })
