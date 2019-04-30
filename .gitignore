@@ -3,6 +3,7 @@ goblinhood.pem
 *.csv
 cassandra.js 
 generate_data.js
+database-mongodb/queries_config.js
 
 # ignore .csv files
 datafile.csv
