@@ -1,5 +1,6 @@
 const Pool = require('pg').Pool
 const bodyParser = require('body-parser')
+const postgresqlPassword = require('./queries_config');
 
 // app.use(bodyParser.urlencoded({
 //   extended: false
@@ -10,7 +11,7 @@ const stock = new Pool({
   user: 'power_user',
   host: 'ec2-13-57-224-41.us-west-1.compute.amazonaws.com',
   database: 'postgres',
-  password: '$poweruserpassword',
+  password: `${postgresqlPassword}`,
   port: 5432
 })
 
