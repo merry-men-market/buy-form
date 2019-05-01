@@ -31,12 +31,9 @@ class App extends React.Component {
             }
         })
             .then(response => {
-                console.log('the response is:', response)
                 return response.json();
             })
             .then(result => {
-                console.log('the result is:', result);
-                console.log('the ticker is: ', result.ticker)
                 let currentPrice = result.current_price;
                 let currentTicker = result.ticker;
                 appThis.setState({
@@ -47,7 +44,7 @@ class App extends React.Component {
     }
 
     changeMode(event) {
-        console.log('trim', event.target.textContent.trim())
+        // console.log('trim', event.target.textContent.trim())
         this.setState({
             mode: event.target.textContent.trim()
         })
@@ -67,7 +64,7 @@ class App extends React.Component {
 
     render() {
         var midContent;
-        console.log(this.state.mode)
+        // console.log(this.state.mode)
         if (this.state.mode === 'Market Order') {
             midContent =
                 (
