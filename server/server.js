@@ -1,4 +1,4 @@
-var newrelic = require('newrelic');
+const newrelic = require('newrelic');
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
@@ -22,6 +22,7 @@ app.use(bodyParser.json())
 
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/stocks/:query', express.static(__dirname + '/../public/'));
+
 app.get('/api/stocks/:query', stockDb.getStockById)
 
 app.listen(port, () => {

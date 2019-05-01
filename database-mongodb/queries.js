@@ -1,5 +1,6 @@
 const Pool = require('pg').Pool
 const bodyParser = require('body-parser')
+const postgresqlPassword = require('./queries_config');
 
 // app.use(bodyParser.urlencoded({
 //   extended: false
@@ -8,11 +9,17 @@ const bodyParser = require('body-parser')
 
 const stock = new Pool({
   user: 'power_user',
-  host: 'ec2-13-57-224-41.us-west-1.compute.amazonaws.com',
+  host: 'ec2-54-153-54-79.us-west-1.compute.amazonaws.com',
   database: 'postgres',
-  password: '$poweruserpassword',
+  password: postgresqlPassword,
   port: 5432
 })
+
+// const stock = new Pool({
+//   host: 'localhost',
+//   database: 'stockbuyform',
+//   port: 5432
+// })
 
 const getStockById = (request, response) => {
   const query = request.params.query
