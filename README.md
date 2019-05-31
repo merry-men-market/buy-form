@@ -1,6 +1,8 @@
 # Buy Form Module
 
-> Robinhood's Buy Form component allows a user to purchase shares of a specific stock
+- Buy-form microservice in a Stock trading application 
+- Scaled with 10M records in PostgreSQL
+- Scaled to handle production-level traffic using Nginx
 
 ## Table of Contents
 
