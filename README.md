@@ -2,7 +2,7 @@
 
 - Buy-form microservice in a Stock trading application 
 - Scaled with 10M records in PostgreSQL
-- Scaled to handle production-level traffic using Nginx
+- Scaled to handle production-level traffic using Nginx, deployed 6 servers on AWS EC2 Instances
 
 ## Table of Contents
 
