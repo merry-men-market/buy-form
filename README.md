@@ -29,10 +29,11 @@ From within the root directory:
 - `npm install` to install dependencies
 - `npm run webpack-dev` to watch webpack
 - `node database-mongodb/generate_data.js` to seed PostgreSQL database (NOTE: This will seed 10 million records)
+- `npm run server` to start server
 
 Browse to: 
 
-``http://localhost:8080/``
+`http://localhost:8080/stocks/*/` where `*` is a number between 1-999,999,999
 
 ## CRUD API
 ### Retrieve a particular stock's data - READ
