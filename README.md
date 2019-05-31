@@ -26,9 +26,9 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 ## Getting Started
 From within the root directory:
 
-`npm install` to install dependencies
-`npm run webpack-dev` to watch webpack
-`node database-mongodb/generate_data.js` to seed PostgreSQL database (NOTE: This will seed 10 million records)
+- `npm install` to install dependencies
+- `npm run webpack-dev` to watch webpack
+- `node database-mongodb/generate_data.js` to seed PostgreSQL database (NOTE: This will seed 10 million records)
 
 Browse to: 
 
