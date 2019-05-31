@@ -2,7 +2,7 @@
 
 - Buy-form microservice in a Stock trading application 
 - Scaled with 10M records in PostgreSQL
-- Scaled to handle production-level traffic using Nginx, deployed 6 servers on AWS EC2 Instances
+- Scaled to handle production-level traffic using Nginx, deployed servers on AWS EC2 Instances
 
 ## Table of Contents
 
@@ -38,19 +38,4 @@ Browse to:
 ### Retrieve a particular stock's data - READ
 ``
 GET - /stocks/:query
-``
-
-### Create a new stock - CREATE
-``
-POST - /stocks/create
-``
-
-### Update a stock by stock symbol - UPDATE
-``
-PATCH - /stocks/:tickerSymbol
-``
-
-### Delete a stock by stock symbol - DELETE
-``
-DELETE - /stocks/:tickerSymbol
 ``
