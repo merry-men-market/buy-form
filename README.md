@@ -1,7 +1,7 @@
 # Buy Form Module
 
-- Buy-form microservice in a Stock trading application 
-- Scaled with 10M records in PostgreSQL
+- Buy-form microservice for a Stock trading application 
+- Seeded 10M records in PostgreSQL
 - Scaled to handle production-level traffic using Nginx, deployed servers on AWS EC2 Instances
 
 ## Table of Contents
