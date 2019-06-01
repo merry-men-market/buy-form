@@ -17,7 +17,7 @@ class App extends React.Component {
             mode: 'Market Order',
             shares: 'none',
             price: 0,
-            ticker: 'none',
+            ticker: 'BRK.A',
         };
     }
 
