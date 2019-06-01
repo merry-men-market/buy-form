@@ -10,6 +10,7 @@
 1. [Requirements](#requirements)
 1. [Getting Started](#getting-started)
 1. [CRUD API](#crud-api)
+1. [Stress Test Results](#stress-test-results)
 
 ## Installation
 
@@ -39,3 +40,5 @@ Browse to:
 ``
 GET - /stocks/:query
 ``
+
+## Stress Test Results
