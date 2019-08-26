@@ -45,3 +45,4 @@ GET - /stocks/:query
 - Throughput: 3,000 requests per second (RPS)
 - Latency: 108 ms
 - Error rate: 0% 
+- ![stress test screenshot](https://github.com/merry-men-market/buy-form/blob/master/loaderio%20results.png)
